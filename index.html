@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CostPulse — Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="center">
+    <div class="card">
+      <img src="logo.svg" alt="CostPulse logo" class="logo" />
+      <h1>Welcome back</h1>
+
+      <form id="loginForm">
+        <label for="userid">User ID (email or username)</label>
+        <input id="userid" name="userid" type="text" required />
+
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input id="password" name="password" type="password" required />
+          <button id="togglePw" type="button" aria-label="Show password">Show</button>
+        </div>
+
+        <div class="row between">
+          <a href="forgot.html">Forgot passcode?</a>
+          <a href="signup.html" class="btn-link">Sign up</a>
+        </div>
+
+        <button class="primary" type="submit">Log in</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

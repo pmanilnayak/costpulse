@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logo.svg - simple CostPulse logo (editable) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#00c2a8" />
+      <stop offset="1" stop-color="#00e0b2" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" rx="14" fill="none" />
+  <g transform="translate(18,18)">
+    <circle cx="36" cy="36" r="36" fill="#071a1a" stroke="url(#g)" stroke-width="2" />
+    <polyline points="6,36 18,20 28,48 40,28 52,36" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(8,2)" />
+    <g transform="translate(90,18)">
+      <text x="0" y="22" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="28" fill="url(#g)">CostPulse</text>
+      <text x="0" y="48" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9aa4b2">spend insights • budgeting • forecasting</text>
+    </g>
+  </g>
+</svg>
