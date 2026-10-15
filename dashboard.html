@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CostPulse — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="dashboardRoot" class="dashboard-root">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="logo.svg" alt="CostPulse" class="slogo" />
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item active">Dashboard</a>
+        <a class="nav-item">Projects & Services</a>
+        <a class="nav-item">Downtime Analytics</a>
+        <a class="nav-item">Log Downtime</a>
+        <a class="nav-item">Integrations</a>
+        <a class="nav-item">API Access</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <div class="account">
+        <div class="avatar">P</div>
+        <div class="acct-info">
+          <div id="cpUser">User</div>
+          <button id="signOut" class="link-btn">Sign out</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <div>
+          <h2>Dashboard</h2>
+          <p class="muted">Impact overview for CliQTest- AI</p>
+        </div>
+        <div class="controls">
+          <select class="project-select">
+            <option>CliQTest- AI</option>
+            <option>Project B</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="cards">
+        <div class="card-stat">
+          <div class="stat-icon">⏱️</div>
+          <div>
+            <div class="muted">Total Downtime</div>
+            <div id="totalDowntime" class="stat-value">-</div>
+            <div class="muted small">2 incidents recorded</div>
+          </div>
+        </div>
+
+        <div class="card-stat">
+          <div class="stat-icon">👥</div>
+          <div>
+            <div class="muted">QA Impact Cost</div>
+            <div id="qaCost" class="stat-value">-</div>
+            <div class="muted small">Testing delays & idle time</div>
+          </div>
+        </div>
+
+        <div class="card-stat">
+          <div class="stat-icon">💵</div>
+          <div>
+            <div class="muted">Production Impact</div>
+            <div id="prodImpact" class="stat-value">-</div>
+            <div class="muted small">Business cost during hours</div>
+          </div>
+        </div>
+
+        <div class="card-stat">
+          <div class="stat-icon">🗂️</div>
+          <div>
+            <div class="muted">Environments</div>
+            <div id="envCount" class="stat-value">-</div>
+            <div class="muted small">Active environments</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lower">
+        <div class="recent card">
+          <div class="card-header">
+            <h3>Recent Incidents</h3>
+            <a class="link">View All ›</a>
+          </div>
+
+          <table class="incidents">
+            <thead>
+              <tr><th>Date</th><th>Service</th><th>Time / Duration</th><th>Impact</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2026-09-22</td><td>Scripting</td><td>14:22-15:21 (59m)</td><td><span class="pill critical">CRITICAL</span></td></tr>
+              <tr><td>2026-09-21</td><td>Scripting</td><td>11:30-12:21 (51m)</td><td><span class="pill critical">CRITICAL</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="quick card">
+          <h3>Quick Actions</h3>
+          <div class="qa">
+            <button id="quickLog" class="action"><span class="plus">＋</span> Log Downtime</button>
+            <button id="quickExport" class="action secondary"><span class="down">⬇</span> Export Report</button>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
